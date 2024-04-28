@@ -5,8 +5,17 @@ function greet(name){
 greet("shadab")
 // console.log(greet("shadab"))
 
+// Area of rectangle
 function areaOfRectangel(a,  b){
     let area = a*b
     console.log(`area of rectange is: ${area} `)
 }
-areaOfRectangel(4,5)
+areaOfRectangel(4,5);
+
+//celsius to fahrenheit converter
+function celsiusToFahrenheit( celsius){
+    let fahrenheit = ( celsius*9/5) +32;
+    console.log(celsius +"°C  = "+ fahrenheit+"F")
+    
+};
+celsiusToFahrenheit(30)
