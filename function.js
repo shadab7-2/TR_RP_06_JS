@@ -18,4 +18,11 @@ function celsiusToFahrenheit( celsius){
     console.log(celsius +"°C  = "+ fahrenheit+"F")
     
 };
-celsiusToFahrenheit(30)
+celsiusToFahrenheit(30);
+
+//Fahrenheit to Celsius Converter
+function fahrenheitToCelsius(fahrenheit){
+ let celsius = ((fahrenheit - 32)/9)*5;
+ console.log(fahrenheit+"F = "+celsius+"°C" )
+}
+fahrenheitToCelsius(86)
