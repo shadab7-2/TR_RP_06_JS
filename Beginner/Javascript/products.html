@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Details</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: rgb(224, 152, 152);
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        
+      }
+      .productInfo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid gainsboro;
+      }
+      .productImg > img {
+        height: 100%;
+        width: 300px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Products Details</h2>
+
+      <div class="productInfo">
+        <div class="productImg">
+          <img id="productImage" src=" " alt="product" />
+        </div>
+        <div class="productDis">
+          <p><strong> <span id="brandName"></span></strong></p>
+          <p><strong>Brand:</strong> <span id="productBrand"></span></p>
+          <p><strong>Rating:</strong> <span id="rating"></span></p>
+          <hr>
+          <p> $ <strong><span id="price"></span></strong></p>
+          <p>M.R.P: <del><span id="mrp"></span></del> </p>
+          <p> <span id="emi"></span></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var productDetails = {
+        name: "Canon EOS R10 24.2MP RF-S18-45mm f/4.5-6.3 IS STM Mirrorless Camera (APS-C Sensor,,4K UHD Video) – Black",
+        brand: "Canon",
+        Rating: "⭐⭐⭐⭐⭐" + "  188 rating",
+        price: "77,990",
+        mrp: "92995",
+        emi: "Inclusive of all taxes EMI starts at ₹3,781. No Cost EMI available EMI",
+        image:
+          "https://m.media-amazon.com/images/I/81F3HiMFxdL._SX522_.jpg",
+      };
+
+      
+      function displayStudentInfo() {
+        document.getElementById("productImage").src = productDetails.image;
+        document.getElementById("brandName").innerText = productDetails.name;
+        document.getElementById("productBrand").innerText =
+          productDetails.brand;
+        document.getElementById("rating").innerText =
+          productDetails.Rating;
+        document.getElementById("price").innerText =
+          productDetails.price;
+        document.getElementById("mrp").innerText =
+          productDetails.mrp;
+        document.getElementById("emi").innerText = productDetails.emi
+          
+      }
+
+      
+      displayStudentInfo();
+    </script>
+  </body>
+</html>

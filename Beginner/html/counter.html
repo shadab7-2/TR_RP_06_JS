@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <style>
+    body {
+        background: lightblue;
+        margin: 40px 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+     
+      
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      height: 300px;
+      border: 5px solid gainsboro;
+      padding: 10px;
+      align-items: center;
+      background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    }
+    .button_container {
+      display: flex;
+      
+    }
+    .button_container>button{
+        border: 1px solid gray;
+        padding: 10px;
+        margin: 50px 10px;
+        border-radius: 10px;
+        font-size: larger;
+        background-color: #3887e8;
+    }
+    .count {
+      border: 5px solid gray;
+      width: 80%;
+    }
+    .count > h3 {
+      margin-left: 20px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Counter App</h1>
+      <div class="count">
+        <h3 id="ini_count">0</h3>
+      </div>
+      <div class="button_container">
+        <button class="btn" id="in_btn" onclick="increaseCount()">Increase</button
+        ><button class="btn" id="de_btn" onclick="decrease()">Decrease</button>
+      </div>
+    </div>  
+    <script>
+        var countElement = document.getElementById("ini_count");
+        var in_btn = document.getElementById("in_btn");
+        var de_btn = document.getElementById("de_btn");
+        
+        in_btn.onclick = function(){
+            var currentCount = parseInt(countElement.innerText);
+            if(currentCount >= 0){
+                var newCount = currentCount + 1;
+            countElement.innerHTML = newCount;
+            }
+            else{
+                countElement.innerHTML = currentCount;
+            }
+            
+        }
+        de_btn.onclick = function(){
+            var currentCount = parseInt(countElement.innerHTML);
+            if(currentCount > 0){
+                var newCount = currentCount - 1;
+            countElement.innerHTML = newCount;
+            }
+           
+        }
+    </script>
+  </body>
+</html>
