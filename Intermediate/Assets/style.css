@@ -1,0 +1,25 @@
+/* Global Selector*/
+*{
+    /* Css resettingl */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* border: 1px solid gray; */
+    /* border-radius: 10px; */
+    padding: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+h1, label, input{
+    color: blue;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+form > label{
+    display: block;
+    
+}
