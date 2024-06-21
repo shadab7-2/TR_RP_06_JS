@@ -3,7 +3,7 @@
     /* Css resettingl */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 body{
     /* display: flex ;
@@ -65,4 +65,9 @@ nav >ul> li{
     color: white;
     font-weight: bold;
     font-size: larger;
+}
+nav>ul>li:hover{
+    text-underline-offset: 8px;
+    text-decoration: underline;
+    cursor: pointer;
 }
